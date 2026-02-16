@@ -14,22 +14,22 @@ cask "tpack" do
   on_macos do
     on_intel do
       url "https://github.com/tmuxpack/tpack/releases/download/v#{version}/tpack_#{version}_darwin_amd64.tar.gz"
-      sha256 "84f02081d9526b18750e03593dd9b964fb62583dc88262b3ad2dbe42f1962b4c"
+      sha256 "8ab79f4c49dcdbd2adf6cee8cc64ac1e6b7d6d11c057999dc67e160d1cbf52cb"
     end
     on_arm do
       url "https://github.com/tmuxpack/tpack/releases/download/v#{version}/tpack_#{version}_darwin_arm64.tar.gz"
-      sha256 "7e027133d2aaae0a991161226804535bbd6f6dc82eef8d4238e000a7a760d072"
+      sha256 "d6bd28d1b1534f6f3e8f33934b6a899dac5c19c56285baf8280c099a95fddb3f"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/tmuxpack/tpack/releases/download/v#{version}/tpack_#{version}_linux_amd64.tar.gz"
-      sha256 "2d47211ee91f034ed0b9cb9d18fe7c066f1547960111d6b01a6f032a3dc31d95"
+      sha256 "0cb48d029e275abca1c8f3ab34222853868e000a77d8edce2ed58e1bb7008b5f"
     end
     on_arm do
       url "https://github.com/tmuxpack/tpack/releases/download/v#{version}/tpack_#{version}_linux_arm64.tar.gz"
-      sha256 "7ece825b7e2d87d3f25b6f35599aba4c9b0a3fb3a251b96a35b8f9f4cb9ed2a2"
+      sha256 "982106efbe981d904400f3b82f87acb07886ebb841fc87780455510dbc0f794c"
     end
   end
 
