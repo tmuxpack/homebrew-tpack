@@ -5,7 +5,7 @@
 class Tpack < Formula
   desc "Tmux Plugin Manager"
   homepage "https://github.com/tmuxpack/tpack"
-  version "0.3"
+  version "0.4"
   license "MIT"
 
   depends_on "git"
@@ -13,16 +13,16 @@ class Tpack < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/tmuxpack/tpack/releases/download/v0.3/tpack_0.3_darwin_amd64.tar.gz"
-      sha256 "5bfdc071d7b50d4875efb9a55e7b01f9df47105ad0ca15a65ea86df8ff0e355a"
+      url "https://github.com/tmuxpack/tpack/releases/download/v0.4/tpack_0.4_darwin_amd64.tar.gz"
+      sha256 "2ce42b1f204316aeab6bef0156de7d97d6bea336519da6b2d67715dd202f35f1"
 
       def install
         bin.install "tpack"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/tmuxpack/tpack/releases/download/v0.3/tpack_0.3_darwin_arm64.tar.gz"
-      sha256 "906196282d53979aee7e9c76deb83e397f557cc13a8abf04d3028505b6d327c8"
+      url "https://github.com/tmuxpack/tpack/releases/download/v0.4/tpack_0.4_darwin_arm64.tar.gz"
+      sha256 "c2b5588ff96b9f4fb4a9077c59673973a07c16adbe7eb9f7cf1d1ea0db515c95"
 
       def install
         bin.install "tpack"
@@ -32,15 +32,15 @@ class Tpack < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tmuxpack/tpack/releases/download/v0.3/tpack_0.3_linux_amd64.tar.gz"
-      sha256 "e39fa38fce381661d8b10a59131e038d0aabff29e2dd86bdba92b1ef5996de94"
+      url "https://github.com/tmuxpack/tpack/releases/download/v0.4/tpack_0.4_linux_amd64.tar.gz"
+      sha256 "92e153275d649a2b4b330020ce442011a2295f98f3a6038de71b916a76e34ac9"
       def install
         bin.install "tpack"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tmuxpack/tpack/releases/download/v0.3/tpack_0.3_linux_arm64.tar.gz"
-      sha256 "86db2a8a0729da36d4be4b201b084285a8fb94b6136104fa36456ba09344553a"
+      url "https://github.com/tmuxpack/tpack/releases/download/v0.4/tpack_0.4_linux_arm64.tar.gz"
+      sha256 "445dc1293773d8126c4aacb01b915b6a7c1f29bba5149dfe75931a89c25af45b"
       def install
         bin.install "tpack"
       end
