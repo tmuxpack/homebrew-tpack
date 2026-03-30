@@ -5,7 +5,7 @@
 class Tpack < Formula
   desc "Tmux Plugin Manager"
   homepage "https://github.com/tmuxpack/tpack"
-  version "0.7.0"
+  version "0.8.0"
   license "MIT"
 
   depends_on "git"
@@ -13,16 +13,16 @@ class Tpack < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/tmuxpack/tpack/releases/download/v0.7.0/tpack_0.7.0_darwin_amd64.tar.gz"
-      sha256 "6172820f038dea6c206bc053fd15354877c7479b263cb3ec11448eb96b2ef74d"
+      url "https://github.com/tmuxpack/tpack/releases/download/v0.8.0/tpack_0.8.0_darwin_amd64.tar.gz"
+      sha256 "082c775d0d9135955eb263a586f9572929687e6fc4d3d1bda0131c4fdf1ba6bf"
 
       define_method(:install) do
         bin.install "tpack"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/tmuxpack/tpack/releases/download/v0.7.0/tpack_0.7.0_darwin_arm64.tar.gz"
-      sha256 "81f3bbf8e89f60903ed10806bb7d3c9da70dfe112c2dbba33157003fd8e161e0"
+      url "https://github.com/tmuxpack/tpack/releases/download/v0.8.0/tpack_0.8.0_darwin_arm64.tar.gz"
+      sha256 "e9cd611619ae284abf99c24be8ee901f3446ed5da568b646e38814dd0f0697f7"
 
       define_method(:install) do
         bin.install "tpack"
@@ -32,15 +32,15 @@ class Tpack < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tmuxpack/tpack/releases/download/v0.7.0/tpack_0.7.0_linux_amd64.tar.gz"
-      sha256 "86f1d01415f604abf1f5b9a0397ef69b81316d672a7e2385204affa9942bbe88"
+      url "https://github.com/tmuxpack/tpack/releases/download/v0.8.0/tpack_0.8.0_linux_amd64.tar.gz"
+      sha256 "500aa9cf8d3b200a3269b6001ceb708d0f0bdd00a5ff5e691ba997673a2cd2e1"
       define_method(:install) do
         bin.install "tpack"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tmuxpack/tpack/releases/download/v0.7.0/tpack_0.7.0_linux_arm64.tar.gz"
-      sha256 "92129798be4e4dde5f9d029fa65aa4f51a94d974f7974d11b7306e4a4b947175"
+      url "https://github.com/tmuxpack/tpack/releases/download/v0.8.0/tpack_0.8.0_linux_arm64.tar.gz"
+      sha256 "1551eb4e0ee9d923b8817b2a5fe048de1c8edc666cac680730f1ba4704552b2d"
       define_method(:install) do
         bin.install "tpack"
       end
