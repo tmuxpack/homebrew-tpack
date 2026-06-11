@@ -1,0 +1,37 @@
+name: test-installer
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  install:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      # Installs Homebrew on the Linux runner (not preinstalled there) and
+      # checks out this commit as the tmuxpack/tpack tap, so the steps below
+      # test the cask from this ref rather than remote main.
+      - name: Set up Homebrew
+        uses: Homebrew/actions/setup-homebrew@master
+
+      # The exact install command documented in the tpack README. Resolves to
+      # the cask and runs its postflight hook on both OSes.
+      - name: Install tpack
+        run: brew install tmuxpack/tpack/tpack
+
+      - name: Verify installed binary
+        run: |
+          expected="tpack $(brew info --cask --json=v2 tmuxpack/tpack/tpack | jq -r '.casks[0].version')"
+          installed="$(tpack version)"
+          echo "expected:  ${expected}"
+          echo "installed: ${installed}"
+          [ "${installed}" = "${expected}" ]
