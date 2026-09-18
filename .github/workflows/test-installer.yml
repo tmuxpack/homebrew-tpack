@@ -21,7 +21,7 @@ jobs:
       # checks out this commit as the tmuxpack/tpack tap, so the steps below
       # test the cask from this ref rather than remote main.
       - name: Set up Homebrew
-        uses: Homebrew/actions/setup-homebrew@master
+        uses: Homebrew/actions/setup-homebrew@main
 
       # The exact install command documented in the tpack README. Resolves to
       # the cask and runs its postflight hook on both OSes.
